@@ -1,0 +1,210 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.game-name {
+    background-color: #000000;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #fafafa;
+    line-height: 5rem;
+}
+
+.flex-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.flex-container>.choices {
+
+    flex: 1;
+    color: white;
+    background-color: #a5a3a3;
+    border-radius: 10rem;
+    padding: 3rem;
+    width: 41rem;
+    height: 37rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 4rem;
+    align-items: start;
+    text-align: center;
+}
+
+.flex-container>.display-container {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+
+.choice {
+    border: none;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 50%;
+    justify-content: start;
+    align-items: center;
+}
+
+.choice>img {
+    border: none;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.choice :hover {
+    box-shadow: rgba(196, 14, 14, 0.1) 0px 1px 2px, rgba(174, 28, 28, 0.7) 0px 2px 4px, rgba(136, 12, 12, 0.7) 0px 4px 8px, rgba(178, 0, 0, 0.07) 0px 8px 16px, rgba(169, 18, 18, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.choice.active {
+    box-shadow: rgba(196, 14, 14, 0.1) 0px 1px 2px, rgba(174, 28, 28, 0.7) 0px 2px 4px, rgba(136, 12, 12, 0.7) 0px 4px 8px, rgba(178, 0, 0, 0.07) 0px 8px 16px, rgba(169, 18, 18, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+
+
+
+.comp-selection {
+    margin: 5rem;
+    background-color: #000000;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    justify-content: start;
+    align-items: center;
+    box-shadow: rgba(196, 14, 14, 0.1) 0px 1px 2px,
+        rgba(28, 174, 55, 0.7) 0px 2px 4px,
+        rgba(11, 180, 53, 0.7) 0px 4px 8px,
+        rgba(0, 178, 62, 0.07) 0px 8px 16px,
+        rgba(18, 169, 109, 0.07) 0px 16px 32px,
+        rgba(13, 173, 90, 0.07) 0px 32px 64px;
+}
+
+.comp-selection>#comp-selection {
+    border: none;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.comp-selection>p {
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.score-board {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10rem;
+    font-size: 1.7rem;
+    justify-content: center;
+}
+
+.display-container>.msg {
+    font-size: 1rem;
+    background-color: #000000;
+    height: 2rem;
+    color: #fafafa;
+    padding: 1rem;
+    line-height: 2rem;
+    border-radius: 1.4rem;
+    width: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+
+    .game-name {
+        background-color: #000000;
+        width: 100%;
+        height: 3rem;
+        font-size: .6rem;
+        margin: 0;
+        line-height: 3rem;
+    }
+
+    .flex-container {
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+    }
+
+    .flex-container>.choices {
+        height: 10px;
+        width: 20rem;
+        flex-direction: row;
+        gap: 2.5rem;
+        border-radius: 4rem;
+        padding: 1rem;
+        margin: 2rem;
+    }
+
+    .flex-container>.display-container {
+        flex: 7;
+        gap: 4rem;
+    }
+
+    .choice {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .choice>img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+
+    .comp-selection {
+        margin: 1rem;
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .comp-selection>#comp-selection {
+
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .comp-selection>p {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+
+    .score-board {
+        margin-top: 1rem;
+        gap: 8rem;
+        font-size: 1rem;
+
+    }
+
+    .display-container>.msg {
+        font-size: 1rem;
+        height: 1rem;
+        padding: 1rem;
+        line-height: 1rem;
+        border-radius: 1.2rem;
+    }
+
+}
